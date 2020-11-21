@@ -23,10 +23,14 @@ public class Main {
         //Obtain Beans from context
         DataBaseAccess shikadoDao=context.getBean("shikado",DataBaseAccessObject.class);
         Parser parser=context.getBean("parser",ShikadoParser.class);
+
         //Provide list of targets to the parser
         parser.setTargeList(targets);
+
         //Create list of ShikadoRoll objects and obtain it from parser
+        System.out.println("Obtain information from Shikado ...");
         List<ShikadoRoll> list = parser.getData();
+
         //Write Data to the database using DataBaseObject
         for(ShikadoRoll roll:list)
         {

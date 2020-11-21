@@ -1,0 +1,2 @@
+DROP TABLE shikado;
+CREATE TABLE shikado(id SERIAL PRIMARY KEY, name VARCHAR (50),price VARCHAR (50),composition VARCHAR(200));
